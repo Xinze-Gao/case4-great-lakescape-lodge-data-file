@@ -1,0 +1,288 @@
+﻿/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Xinze Gao
+   Date:   September 24th
+   
+   Filename: lake_styles.css
+
+*/
+
+@charset "UTF-8";
+/* 3.a: Character encoding definition */
+
+/* 3.b: Web font application */
+@font-face {
+    font-family: 'HeaderFont';
+    src: url('cac_champagne.woff') format('woff'),
+         url('cac_champagne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url('DobkinPlain.woff') format('woff'),
+         url('DobkinPlain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Base styles - Body and typography */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(119, 58, 127, 0.95); /* 3.d: Semi-transparent background */
+    font-size: 16px;
+    color: #ffffff; /* 3.c: Color value */
+    line-height: 1.6;
+    border-left: 20px solid rgb(187, 169, 56);
+    border-right: 20px solid rgb(187, 169, 56);
+}
+
+/* Header section styles */
+header {
+    background-color: #000000; /* 3.c: Color value */
+    color: white; /* 3.c: Color name */
+}
+
+/* Navigation styles */
+nav {
+    background-color: rgba(124, 73, 131, 0.95); /* 3.d: Semi-transparent */
+    padding: 10px 0; /* 3.h: Padding space */
+}
+
+/* 3.e: Child element selector */
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 3.e: Nested selectors */
+nav ul li {
+    display: block;
+    margin: 0 15px; /* 3.h: Margin space */
+}
+
+nav ul li a {
+    color: #9c9999;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+/* 3.g: Pseudo-classes for hover effect */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #de9cc6;
+}
+
+/* Main content typography */
+.one {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Heading styles with web fonts */
+h1 {
+    font-size: 50px;
+    font-weight: normal;
+    margin: 20px 15px 0; /* 3.h: Margin space */
+    padding-bottom: 5px; /* 3.h: Padding space */
+    font-family: 'HeaderFont'; /* 3.b: Web font */
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: normal;
+    margin: 15px 20px; /* 3.h: Margin space */
+    padding-bottom: 10px; /* 3.h: Padding space */
+    font-family: 'BodyFont'; /* 3.b: Web font */
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 15px; /* 3.h: Margin space */
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+/* Image responsive styles */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* 3.h: Margin space */
+}
+
+/* 3.f: List styles modification */
+ul {
+    list-style-type: none; /* 3.f: Remove default markers */
+    padding-left: 0;
+    margin: 10px;
+}
+
+ul li {
+    margin-bottom: 5px; /* 3.h: Margin space */
+    font-size: 14px;
+}
+
+/* Special styling for notes list with disc markers */
+aside:first-of-type ul {
+    list-style-type: disc; /* 3.f: Custom list markers */
+    padding-left: 20px; /* 3.h: Padding space */
+}
+
+aside:first-of-type ul li {
+    margin-bottom: 3px; /* 3.h: Margin space */
+}
+
+/* Sidebar styles */
+aside {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px; /* 3.h: Margin space */
+}
+
+aside h2 {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: none;
+    margin: 15px 0 5px 0; /* 3.h: Margin space */
+    padding: 0;
+}
+
+/* Left column specific styles */
+#leftcol {
+    background-color: #000000;
+}
+
+#leftcol :link {
+    color: rgb(235, 132, 196);
+}
+
+#leftcol aside {
+    background-color: #fdb19a;
+}
+
+#leftcol #two {
+    background-color: #caa55a;
+}
+
+#leftcol h2 {
+    text-align: center;
+}
+
+/* Right column specific styles */
+#rightcol {
+    background-color: rgba(124, 73, 131, 0.95);
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Blockquote styling */
+blockquote {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: rgba(124, 73, 131, 0.95);
+    border-left: 4px solid rgba(124, 73, 131, 0.95);
+    padding: 15px; /* 3.h: Padding space */
+    margin: 0 !important;
+    font-style: italic;
+    color: #e78af6;
+    border-bottom: none;
+    font-size: 17px;
+}
+
+/* 3.i: Generated content using pseudo-elements */
+blockquote::before {
+    content: open-quote; /* 3.i: Generate content */
+    font-size: 2em;
+    color: #e78af6;
+    line-height: 0;
+    vertical-align: -0.4em;
+}
+
+blockquote::after {
+    content: close-quote; /* 3.i: Generate content */
+    font-size: 2em;
+    color: #e78af6;
+    vertical-align: -0.4em;
+}
+
+/* Footer styles */
+footer {
+    background-color: #525c65;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* 3.h: Padding space */
+    margin: 0 !important;
+    width: 100%;
+    border-top: none;
+    clear: both;
+}
+
+/* Layout adjustments */
+#rightcol nav {
+    margin-bottom: 0; /* 3.h: Margin space */
+    padding-bottom: 0; /* 3.h: Padding space */
+}
+
+#rightcol blockquote:last-child {
+    margin-bottom: 0;
+}
+
+/* 3.j: Flexbox layout for image gallery */
+.image-row {
+    display: flex; /* 3.j: Flexbox layout */
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.image-item {
+    text-align: center;
+    flex: 1;
+    margin: 0 5px; /* 3.h: Margin space */
+}
+
+/* Text emphasis styles */
+em {
+    color: #ffffff;
+    font-style: italic;
+}
+
+cite {
+    font-style: italic;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    #leftcol, #rightcol {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+/* Print styles for better printing experience */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    nav, footer {
+        display: none;
+    }
+}
